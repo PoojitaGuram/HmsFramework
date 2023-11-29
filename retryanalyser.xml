@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite thread-count="1" parallel="tests" name="Suite">
+<listeners>
+<listener class-name= "com.hms.GenericUtils.Iannotationtrans"></listener>
+</listeners>
+  <test thread-count="1" parallel="tests" name="Test">
+    <classes>
+      <class name="com.hms.patientmodule.PatientBookAppointmentbasetest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

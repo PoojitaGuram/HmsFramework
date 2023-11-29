@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite thread-count="2" parallel="tests" name="Suite">
+
+  <test  name="Test1">
+  <parameter name="browser1" value ="chrome"></parameter>
+    <classes>
+      <class name="testngtests.Demo"/>
+      <class name="testngtests.Demo1"/>
+    </classes>
+  </test> <!-- Test -->
+   <test  name="Test2">
+   <parameter name="browser1" value ="edge"></parameter>
+    <classes>
+      <class name="testngtests.Demo"/>
+      <class name="testngtests.Demo1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

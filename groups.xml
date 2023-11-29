@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite thread-count="1" parallel="tests" name="Suite">
+<groups>
+<run>
+<include name="smoke"></include>
+</run>
+</groups>
+  <test thread-count="1" parallel="tests" name="Test">
+    <classes>
+      <class name="testngtests.Demo"/>
+      <methods>
+      <exclude name="start"></exclude>
+      </methods>
+      <class name="testngtests.Demo1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
