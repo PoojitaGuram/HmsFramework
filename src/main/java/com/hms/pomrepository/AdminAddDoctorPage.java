@@ -31,14 +31,14 @@ public class AdminAddDoctorPage extends WebdriverUtils {
 		return submitd;
 	}
 
-	public void enteralldoctordetails(WebDriver driver, HashMap<String, String> hmap, String DoctorSpecialization) {
+	public void enteralldoctordetails(WebDriver driver, HashMap<String, String> hmap, String DoctorSpecialization) throws Throwable {
 		for (Entry<String, String> data : hmap.entrySet()) {
 			WebElement elekey = driver.findElement(By.name(data.getKey()));
 			elekey.sendKeys(data.getValue());
              
 		}
 		selectbyvisibletext(Doctorspecilization, DoctorSpecialization);
-	
+	  Thread.sleep(2000);
 		submitd.click();
 
 	}
