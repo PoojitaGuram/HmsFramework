@@ -76,7 +76,7 @@ public class Adminadddoctortest {
 
 		DoctorLoginPage doctorlogin = new DoctorLoginPage(driver);
 		doctorlogin.Doctorlogin(USERNAME1, PASSWORD1);
-        System.out.println("admin added doctor");
+       
 		wbd.Minimizethewindow(driver);
 		driver.quit();
 	}
