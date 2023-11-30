@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
 import com.hms.GenericUtils.FileUtils;
@@ -21,8 +22,8 @@ import com.hms.pomrepository.UserDashboardPage;
 import com.hms.pomrepository.UserEditProfilePage;
 
 public class Patientupdateprofiletest {
-
-	public static void main(String[] args) throws Throwable {
+   @Test
+	public  void pateint3()  throws Throwable {
 		ExcelUtils excel = new ExcelUtils();
 		FileUtils file = new FileUtils();
 		WebdriverUtils wbd = new WebdriverUtils();

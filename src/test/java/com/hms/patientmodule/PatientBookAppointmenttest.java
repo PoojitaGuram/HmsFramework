@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
 import com.hms.GenericUtils.FileUtils;
@@ -24,8 +25,8 @@ import com.hms.pomrepository.UserBookAppointmentPage;
 import com.hms.pomrepository.UserDashboardPage;
 
 public class PatientBookAppointmenttest {
-
-	public static void main(String[] args) throws Throwable {
+    @Test
+	public void patient1 ()throws Throwable {
 		ExcelUtils excel = new ExcelUtils();
 		FileUtils file = new FileUtils();
 		WebdriverUtils wbd = new WebdriverUtils();

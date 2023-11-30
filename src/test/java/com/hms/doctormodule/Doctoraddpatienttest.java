@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
 import com.hms.GenericUtils.FileUtils;
@@ -26,8 +27,9 @@ import com.hms.pomrepository.PatientLoginPage;
 import com.hms.pomrepository.UserDashboardPage;
 
 public class Doctoraddpatienttest {
-
-	public static void main(String[] args) throws Throwable {
+   
+	@Test
+	public  void doctortest() throws Throwable {
 		ExcelUtils excel = new ExcelUtils();
 		FileUtils file = new FileUtils();
 		WebdriverUtils wbd = new WebdriverUtils();
