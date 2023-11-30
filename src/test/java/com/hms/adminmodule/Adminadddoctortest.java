@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
 import com.hms.GenericUtils.FileUtils;
@@ -27,7 +28,8 @@ import com.hms.pomrepository.DoctorLoginPage;
 import com.hms.pomrepository.HmsHomePage;
 
 public class Adminadddoctortest {
-	public static void main(String[] args) throws Throwable {
+	@Test
+	public  void adminadddoctor() throws Throwable {
 		ExcelUtils excel = new ExcelUtils();
 		FileUtils file = new FileUtils();
 		WebdriverUtils wbd = new WebdriverUtils();
@@ -74,7 +76,7 @@ public class Adminadddoctortest {
 
 		DoctorLoginPage doctorlogin = new DoctorLoginPage(driver);
 		doctorlogin.Doctorlogin(USERNAME1, PASSWORD1);
-
+        System.out.println("admin added doctor");
 		wbd.Minimizethewindow(driver);
 		driver.quit();
 	}

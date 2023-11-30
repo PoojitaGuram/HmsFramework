@@ -18,6 +18,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
 import com.hms.GenericUtils.FileUtils;
@@ -30,8 +31,8 @@ import com.hms.pomrepository.HmsHomePage;
 import adminmodule.Adminchangepassword;
 
 public class Adminchangepasswordtest {
-
-	public static void main(String[] args) throws Throwable {
+@Test
+	public  void  adminchangepass ()throws Throwable {
 		ExcelUtils excel = new ExcelUtils();
 		FileUtils file = new FileUtils();
 		WebdriverUtils wbd = new WebdriverUtils();
