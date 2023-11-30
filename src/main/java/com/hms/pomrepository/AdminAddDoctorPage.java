@@ -10,9 +10,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.hms.GenericUtils.ExcelUtils;
+import com.hms.GenericUtils.JavaUtils;
 import com.hms.GenericUtils.WebdriverUtils;
 
 public class AdminAddDoctorPage extends WebdriverUtils {
+	
+	JavaUtils j=new JavaUtils();
 	public AdminAddDoctorPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -30,6 +33,14 @@ public class AdminAddDoctorPage extends WebdriverUtils {
 	public WebElement getSubmitd() {
 		return submitd;
 	}
+	@FindBy(name ="docemail")
+	private WebElement email;
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	
 
 	public void enteralldoctordetails(WebDriver driver, HashMap<String, String> hmap, String DoctorSpecialization) throws Throwable {
 		for (Entry<String, String> data : hmap.entrySet()) {
@@ -37,8 +48,9 @@ public class AdminAddDoctorPage extends WebdriverUtils {
 			elekey.sendKeys(data.getValue());
              
 		}
+		email.sendKeys("poo"+j.getRandomNo()+"@gmail.com");
 		selectbyvisibletext(Doctorspecilization, DoctorSpecialization);
-	  Thread.sleep(2000);
+	  Thread.sleep(20000);
 		submitd.click();
 
 	}
