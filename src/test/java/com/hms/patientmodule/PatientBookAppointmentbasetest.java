@@ -29,7 +29,7 @@ public class PatientBookAppointmentbasetest extends BaseClass
 		
 		// click on bookapoointment module
 		UserDashboardPage udp = new UserDashboardPage(driver);
-		Assert.fail();
+		
 		udp.clickonBookAppointmentPM();
 
 		// Enter the doctor specilization
@@ -42,14 +42,13 @@ public class PatientBookAppointmentbasetest extends BaseClass
 		UserBookAppointmentPage ubap = new UserBookAppointmentPage(driver);
 		ubap.Enteralldetails(DoctorSpecialization, driver, 5, Doctors);
           
-		//
+	
 		String message = wbu.alertText(driver);
 		System.out.println(message);
 		// handle the alert
 		wbu.alertAccept(driver);
 
-		
-
+	
 
 	}
 
