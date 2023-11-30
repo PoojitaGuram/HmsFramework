@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
@@ -62,11 +63,14 @@ public class Admineditdocyordetailstest {
 		
 	   WebElement confirmm = admeditdoc.getConfirmmsg();
 		String actualmess = confirmm.getText();
-		if (actualmess.equals(expectedmess)) {
+		Assert.assertEquals(actualmess,expectedmess );
+		System.out.println("doctor detail updated");
+		
+		/*if (actualmess.equals(expectedmess)) {
 			System.out.println("doctor details changed");
 		} else {
 			System.out.println("doctor detilas not changed");
-		}
+		}*/
 
 		// click on doctor module and click on manage doctors
 		dba.clickondoctclikonmanagedoctor();
@@ -75,16 +79,20 @@ public class Admineditdocyordetailstest {
 		
 
 
-	WebElement ucf1 = driver.findElement(By.xpath("//input[@name='docfees']"));
-		//WebElement ucf1 = admeditdoc.getConsultancyfees();
+	//WebElement ucf1 = driver.findElement(By.xpath("//input[@name='docfees']"));
+		WebElement ucf1 = admeditdoc.getConsultancyfees();
+		String actualfee = ucf1.getText();
+	    String previouscounsltancyfees ="100";
+	    Assert.assertNotEquals(actualfee,previouscounsltancyfees);
+	    System.out.println("fee updated");
 		
-		String actualconsultancy = ucf1.getAttribute("value");
+		/*String actualconsultancy = ucf1.getAttribute("value");
 		if (actualconsultancy.equals(fees)) {
 			System.out.println("doctor updated");
 
 		} else
 			System.out.println("doctor not updated");
-		wbd.Maximizethewindow(driver);
+		wbd.Maximizethewindow(driver);*/
 		driver.quit();
 
 	}

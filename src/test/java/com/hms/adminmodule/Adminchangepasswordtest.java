@@ -18,6 +18,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.hms.GenericUtils.ExcelUtils;
@@ -61,11 +62,14 @@ public class Adminchangepasswordtest {
 		AdminChangePasswordPage adchp = new AdminChangePasswordPage(driver);
 		adchp.changepassword(driver, excel.readmultipledatafromthExcelsheet1("AdminchangepasswordSheet6"));
 
-		String actualtext = "Password Changed Successfully !!								";
+		String actualtext = "Password Changed Successfully !!";
 		
 		WebElement confirmess = adchp.getCongirmmsg();
+		
 		String confirm = confirmess.getText();
-		assertEquals(actualtext,confirm, "password empty");
+		//System.out.println(confirm);
+		Assert.assertEquals(confirm, actualtext);
+		System.out.println("password changed");
 		/*if (confirm.equalsIgnoreCase(expectedtext)) {
 			System.out.println("password confirmed");
 

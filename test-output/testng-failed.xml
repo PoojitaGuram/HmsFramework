@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hms.patientmodule.PatientBookAppointmentbasetest">
+      <class name="com.hms.adminmodule.Adminadddoctortest">
         <methods>
-          <include name="config_am"/>
-          <include name="config_ac"/>
-          <include name="config_as"/>
-          <include name="config_bc"/>
-          <include name="config_bs"/>
-          <include name="test1"/>
-          <include name="config_bm"/>
+          <include name="adminadddoctor"/>
         </methods>
-      </class> <!-- com.hms.patientmodule.PatientBookAppointmentbasetest -->
+      </class> <!-- com.hms.adminmodule.Adminadddoctortest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
