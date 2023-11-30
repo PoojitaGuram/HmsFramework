@@ -48,7 +48,7 @@ public class PatientBookAppointmentbasetest extends BaseClass
 		// handle the alert
 		wbu.alertAccept(driver);
 
-	
+
 
 	}
 
