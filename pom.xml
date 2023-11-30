@@ -73,7 +73,7 @@
   </properties>
   <profiles>
 	 <profile>
-		 <id></id>
+		 <id>patient</id>
 		 <build>
 			 <pluginManagement>
 				 <plugins>
@@ -83,7 +83,7 @@
                      <version>3.2.2</version>
                      <configuration>
 						 <suiteXmlFiles>
-							 <suiteXmlFile></suiteXmlFile>
+							 <suiteXmlFile>jenkinpatient.xml</suiteXmlFile>
 						 </suiteXmlFiles>
 					 </configuration>
                      </plugin>
