@@ -62,6 +62,7 @@ public void config_bc() throws Throwable {
 	
 	@BeforeMethod(alwaysRun = true)
 public void config_bm() throws Throwable {
+		System.out.println("browser is launched");
 	 String URL = fu.readdatafrompropertyfile("Url");
  //String USERNAMEA = fu.readdatafrompropertyfile("UsernameA ");
  String USERNAMEP = fu.readdatafrompropertyfile("UsernameP");

@@ -22,7 +22,7 @@ import com.hms.pomrepository.UserBookAppointmentPage;
 import com.hms.pomrepository.UserDashboardPage;
 
 //@Listeners(ListnerImplementationClass.class)
-public class PatientBookAppointmentbasetest extends BaseClass
+public class PatientBookAppointmentbasepoojatest extends BaseClass
  {
 	@Test()
 	public void test1() throws Throwable, IOException {
